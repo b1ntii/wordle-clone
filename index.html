@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wordle</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Wordle</h1>
+
+<div id="stage">
+  <div id="streak" aria-live="polite"></div>
+  <div id="bunny" data-mood="curious" aria-hidden="true">
+    <svg viewBox="0 0 120 108" xmlns="http://www.w3.org/2000/svg">
+      <g class="ear l"><ellipse cx="40" cy="30" rx="11" ry="28"/><ellipse class="in" cx="40" cy="32" rx="5" ry="19"/></g>
+      <g class="ear r"><ellipse cx="80" cy="30" rx="11" ry="28"/><ellipse class="in" cx="80" cy="32" rx="5" ry="19"/></g>
+      <ellipse class="head" cx="60" cy="76" rx="40" ry="26"/>
+      <ellipse class="cheek" cx="36" cy="82" rx="6.5" ry="4"/>
+      <ellipse class="cheek" cx="84" cy="82" rx="6.5" ry="4"/>
+      <g class="eyes-open"><circle cx="45" cy="72" r="3.6"/><circle cx="75" cy="72" r="3.6"/><circle class="shine" cx="46.2" cy="70.8" r="1.2"/><circle class="shine" cx="76.2" cy="70.8" r="1.2"/></g>
+      <g class="eyes-happy"><path d="M39 73 q6 -8 12 0 M69 73 q6 -8 12 0"/></g>
+      <g class="eyes-sad"><circle cx="45" cy="74" r="3.6"/><circle cx="75" cy="74" r="3.6"/><path class="brow" d="M38 66 l12 3 M82 66 l-12 3"/><path class="tear" d="M45 79 q-3 5 0 6.5 q3 -1.5 0 -6.5z"/></g>
+      <ellipse class="nose" cx="60" cy="79" rx="3.4" ry="2.5"/>
+      <path class="mouth mouth-smile" d="M60 81.5 v2 M60 83.5 q-4.5 4 -9 .5 M60 83.5 q4.5 4 9 .5"/>
+      <path class="mouth mouth-frown" d="M60 81.5 v2 M52 91 q8 -6 16 0"/>
+      <ellipse class="paw" cx="40" cy="101" rx="10" ry="6.5"/>
+      <ellipse class="paw" cx="80" cy="101" rx="10" ry="6.5"/>
+    </svg>
+  </div>
+
+  <div id="board" aria-label="Game board"></div>
+</div>
+
+<div id="msg" role="status"></div>
+<div id="kb"></div>
+<button id="again">Play again</button>
+<div id="hearts" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
